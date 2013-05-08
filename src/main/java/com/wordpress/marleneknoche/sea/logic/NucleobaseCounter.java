@@ -12,7 +12,6 @@ public class NucleobaseCounter {
 
 		for(int i = 0; i<testString.length(); i++){
 			String actual = testString.substring(i,i+1);
-			//System.out.println(actual);
 			if(nucleobaseMap.containsKey(actual)){
 				nucleobaseMap.put(actual,nucleobaseMap.get(actual)+1);
 			}else{
@@ -30,7 +29,6 @@ public class NucleobaseCounter {
 	}
 
 	public int countPyrimidines(Map<String, Integer> nucleobaseMap) {
-		// TODO Auto-generated method stub
 		return nucleobaseMap.get("C") + nucleobaseMap.get("T");
 	}
 
