@@ -3,6 +3,12 @@ package com.wordpress.marleneknoche.sea.logic;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 
+ * @author marlene
+ *
+ */
+
 public class NucleobaseCounter {
 
 	

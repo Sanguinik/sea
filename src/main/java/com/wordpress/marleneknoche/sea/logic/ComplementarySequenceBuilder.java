@@ -1,5 +1,10 @@
 package com.wordpress.marleneknoche.sea.logic;
 
+/**
+ * 
+ * @author marlene
+ *
+ */
 
 public class ComplementarySequenceBuilder {
 
@@ -7,11 +12,6 @@ public class ComplementarySequenceBuilder {
 
 		String inverted = "";
 			
-		/*
-		 * jedes zeichen auf stapel legen (push)
-		 * (erstes ganz unten, letzes ganz oben)
-		 * dann von oben alle abholen und invertieren (pop)
-		 */
 		for(int i = nucleobaseString.length()-1; i >= 0;i--){
 						
 			String actual = nucleobaseString.substring(i,i+1);

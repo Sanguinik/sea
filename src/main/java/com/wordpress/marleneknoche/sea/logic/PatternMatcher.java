@@ -1,5 +1,11 @@
 package com.wordpress.marleneknoche.sea.logic;
 
+/**
+ * 
+ * @author marlene
+ *
+ */
+
 public class PatternMatcher {
 
 	public boolean findGGG(String sequence) {

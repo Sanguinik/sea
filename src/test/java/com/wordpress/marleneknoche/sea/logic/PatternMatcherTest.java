@@ -9,7 +9,7 @@ import org.junit.Test;
 public class PatternMatcherTest {
 
 	private PatternMatcher patternMatcher;
-	private static final String SEQUENCE = "AGGCTAGACGAGGGCTAGTCGGGG";
+	private static final String SEQUENCE = "AGGCTAGACGAGGGCTAG7TCGGGG";
 	
 	@Before
 	public void setUp(){
