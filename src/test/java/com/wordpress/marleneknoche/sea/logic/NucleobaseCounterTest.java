@@ -25,16 +25,16 @@ public class NucleobaseCounterTest {
 		
 		nucleobaseMap = nucleobaseCounter.countNucleobases(TEST_STRING);
 		
-		assertEquals("13", nucleobaseMap.get("G"));
-		assertEquals("8", nucleobaseMap.get("T"));
-		assertEquals("10", nucleobaseMap.get("C"));
-		assertEquals("12", nucleobaseMap.get("A"));
+		assertEquals(13, nucleobaseMap.get("G"),0);
+		assertEquals(8, nucleobaseMap.get("T"),0);
+		assertEquals(10, nucleobaseMap.get("C"),0);
+		assertEquals(12, nucleobaseMap.get("A"),0);
 	}
 	
 	@Test
 	public void countPurinesTest(){
 		
-		//A+G=pu
+		
 		
 		Map<String,Integer> nucleobaseMap = new HashMap<String,Integer>();
 		
