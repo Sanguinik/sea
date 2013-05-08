@@ -19,7 +19,7 @@ public class ComplementarySequenceBuilderTest {
 	@Test
 	public void invertNucleobasesTest() {
 		String invertedString = complementarySequenceBuilder.invertNucleobases(NUCLEOBASE_STRING);
-		//AT GC
+		
 		assertEquals("GTAA", invertedString);
 	}
 
