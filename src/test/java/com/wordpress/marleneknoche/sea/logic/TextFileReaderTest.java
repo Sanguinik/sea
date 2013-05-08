@@ -9,7 +9,7 @@ public class TextFileReaderTest {
 
 	private static final String TEST_TEXT = "GTAC";
 	private static final String EMPTY_TEXT = "";
-	private static final String TEXT_FILE = "/src/test/resources/testtext.txt";
+	private static final String TEXT_FILE = "\testtext.txt";
 	
 	
 	private TextFileReader textFileReader;
@@ -29,6 +29,8 @@ public class TextFileReaderTest {
 		
 		String loadedText = textFileReader.loadText(TEXT_FILE);
 			
+		System.out.println("Geladener Text:" + loadedText);
+		
 		assertTrue(loadedText == TEST_TEXT);
 			
 	}
