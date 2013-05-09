@@ -9,7 +9,10 @@ import org.junit.Test;
 public class PatternMatcherTest {
 
 	private PatternMatcher patternMatcher;
-	private static final String SEQUENCE = "AGGCTAGACGAGGGCTAG7TCGGGG";
+	private static final String SEQUENCE = "AGGCTAGACGAGGGCTAG7TCGGGGCAGTA";
+	
+	private static final String BROWN_EYES = "CAGCAA";
+	
 	
 	@Before
 	public void setUp(){
@@ -34,5 +37,22 @@ public class PatternMatcherTest {
 		assertEquals(4, position);
 		
 	}
-
+	
+	
+	@Test
+	public void hasBrownEyesTest(){
+		boolean brownEyes = patternMatcher.hasBrownEyes(BROWN_EYES);
+		assertTrue(brownEyes);
+	}
+	
+	@Test
+	public void hasNoBrownEyesTest(){
+		
+		boolean brownEyes = patternMatcher.hasBrownEyes(SEQUENCE);
+		
+		assertFalse(brownEyes);
+		
+	}
+	
+	
 }
