@@ -10,7 +10,7 @@ public class PatternMatcher {
 
 	public boolean findGGG(String sequence) {
 		// TODO Auto-generated method stub
-		return false;
+		return sequence.contains("GGG");
 	}
 
 	public int checkFirstOccurenceOfCTAG(String sequence) {

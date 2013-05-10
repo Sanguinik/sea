@@ -2,18 +2,16 @@ package com.wordpress.marleneknoche.sea.logic;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 
 /**
  * 
  * This class is used to load the text of a text file.
  * 
  * @author marlene
- *
+ * 
  */
 
 public class TextFileReader {
@@ -21,41 +19,39 @@ public class TextFileReader {
 	/**
 	 * This method loads a text file and extracts its content to a string.
 	 * 
-	 * @param textFile The path to the file should be read.
+	 * @param textFile
+	 *            The path to the file should be read.
 	 * @return a string with the text of the file
 	 */
-	
-	public String loadText(String textFile) {
-				
+
+	public String loadText(File textFile) {
+
 		String documentText = "";
-		
-		InputStream fileInputStream;
-		
-		if(textFile == null){
+
+		if (textFile == null) {
 			return documentText;
 		}
-		
-		try{
+
+		FileReader fileReader;
+		try {
 			
-			File file = new File(textFile);
-			file.createNewFile();
-			fileInputStream = new FileInputStream(file);
-			InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
-			BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-			StringBuffer bufferedText = new StringBuffer();	
-			while(bufferedReader.readLine() != null){
-			bufferedText.append(bufferedReader.readLine());
+			fileReader = new FileReader(textFile);
+			BufferedReader bufferedReader = new BufferedReader(fileReader);
+
+			String line;
+
+			while ((line = bufferedReader.readLine()) != null) {
+
+				documentText += line;
 			}
-			documentText = bufferedText.toString();
-			System.out.println("Mein Text:" + documentText);
-			
-			
-		} catch (FileNotFoundException e){
+
+			bufferedReader.close();
+		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-		} catch (IOException e){
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
 		return documentText;
 	}
 

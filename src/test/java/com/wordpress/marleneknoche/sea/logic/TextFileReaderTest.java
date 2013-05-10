@@ -1,6 +1,9 @@
 package com.wordpress.marleneknoche.sea.logic;
 
+import static org.junit.Assert.*;
 import static org.junit.Assert.assertTrue;
+
+import java.io.File;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -9,8 +12,9 @@ public class TextFileReaderTest {
 
 	private static final String TEST_TEXT = "GTAC";
 	private static final String EMPTY_TEXT = "";
-	private static final String TEXT_FILE = "\testtext.txt";
+	private static final File TEXT_FILE = new File(Thread.currentThread().getContextClassLoader().getResource("testtext.txt").getFile()) ;
 	
+
 	
 	private TextFileReader textFileReader;
 	
@@ -27,11 +31,11 @@ public class TextFileReaderTest {
 	@Test
 	public void loadTextTest() {
 		
+		
 		String loadedText = textFileReader.loadText(TEXT_FILE);
 			
-		System.out.println("Geladener Text:" + loadedText);
 		
-		assertTrue(loadedText == TEST_TEXT);
+		assertEquals(TEST_TEXT, loadedText);
 			
 	}
 	
