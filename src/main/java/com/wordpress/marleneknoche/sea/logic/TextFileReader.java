@@ -52,7 +52,9 @@ public class TextFileReader {
 			e.printStackTrace();
 		}
 
-		return documentText;
+	
+		
+		return documentText.toUpperCase();
 	}
 
 }

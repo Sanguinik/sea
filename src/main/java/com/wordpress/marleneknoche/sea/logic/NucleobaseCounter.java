@@ -38,4 +38,14 @@ public class NucleobaseCounter {
 		return nucleobaseMap.get("C") + nucleobaseMap.get("T");
 	}
 
+	public boolean hasMorePurinesThanPyrimidines(
+			Map<String, Integer> nucleobaseMap) {
+		
+		if(countPurines(nucleobaseMap) > countPyrimidines(nucleobaseMap)){
+			return true;
+		}
+		
+		return false;
+	}
+
 }

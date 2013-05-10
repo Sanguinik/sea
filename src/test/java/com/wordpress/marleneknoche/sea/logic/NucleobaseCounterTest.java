@@ -1,6 +1,7 @@
 package com.wordpress.marleneknoche.sea.logic;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -64,6 +65,21 @@ public class NucleobaseCounterTest {
 		int numberOfPyrimidines = nucleobaseCounter.countPyrimidines(nucleobaseMap);
 		
 		assertEquals(18, numberOfPyrimidines);
+		
+	}
+	
+	@Test
+	public void hasMorePurinesThanPyrimidinesTest(){
+		
+		Map<String, Integer> nucleobaseMap = new HashMap<String, Integer>();
+		
+		nucleobaseMap.put("G", 13);
+		nucleobaseMap.put("T", 8);
+		nucleobaseMap.put("C", 10);
+		nucleobaseMap.put("A", 12);
+		
+		
+		assertTrue(nucleobaseCounter.hasMorePurinesThanPyrimidines(nucleobaseMap));
 		
 	}
 
