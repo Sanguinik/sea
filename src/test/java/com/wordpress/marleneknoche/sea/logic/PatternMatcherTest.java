@@ -9,7 +9,8 @@ import org.junit.Test;
 public class PatternMatcherTest {
 
 	private PatternMatcher patternMatcher;
-	private static final String SEQUENCE = "AGGCTAGACGAGGGCTAG7TCGGGGCAGTA";
+	private static final String SEQUENCE = "AGGCTAGACGAGGGCTAGTCGGGGCAGTAGGATCTT";
+	private static final String SEQUENCE_WITH_NO_SIGN = "AGTGACTACGCTAGCTAGGTCATC";
 	
 	private static final String BROWN_EYES = "CAGCAA";
 	
@@ -54,5 +55,23 @@ public class PatternMatcherTest {
 		
 	}
 	
+	
+	@Test
+	public void hasSignsForFromingensDischrypsiaTest(){
+		
+		boolean hasSigns = patternMatcher.hasSignsForFromingensDischrypsia(SEQUENCE);
+		
+		assertTrue(hasSigns);
+		
+	}
+	
+	@Test
+	public void hasNoSignsForFromingensDischrypsiaTest(){
+		
+		boolean hasSigns = patternMatcher.hasSignsForFromingensDischrypsia(SEQUENCE_WITH_NO_SIGN);
+		
+		assertFalse(hasSigns);
+		
+	}
 	
 }
