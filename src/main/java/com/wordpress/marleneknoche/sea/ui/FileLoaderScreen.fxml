@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color:midnightblue;" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <VBox alignment="CENTER_LEFT" prefHeight="400.0" prefWidth="600.0" spacing="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" style="-fx-background-color:royalblue;">
+          <children>
+            <ImageView fitHeight="107.61798095703125" fitWidth="251.39107405730823" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="file:/home/marlene/git/sea/src/main/resources/logo.png" />
+              </image>
+              <HBox.margin>
+                <Insets />
+              </HBox.margin>
+            </ImageView>
+            <Label alignment="BOTTOM_LEFT" contentDisplay="LEFT" graphicTextGap="4.0" prefHeight="93.61798095703125" prefWidth="288.0" text="sea - sequence analyzer" textAlignment="LEFT" textFill="WHITE" underline="false" wrapText="false">
+              <font>
+                <Font name="System Italic" size="20.0" />
+              </font>
+            </Label>
+          </children>
+          <padding>
+            <Insets bottom="20.0" left="10.0" top="20.0" />
+          </padding>
+          <VBox.margin>
+            <Insets bottom="40.0" />
+          </VBox.margin>
+        </HBox>
+        <HBox prefHeight="59.0" prefWidth="560.0" spacing="20.0">
+          <children>
+            <TextField fx:id="textFileURL" prefWidth="415.0" />
+            <Button fx:id="chooseFile" mnemonicParsing="false" prefWidth="131.0" style="-fx-text-fill:white;&#10;-fx-background-color:royalblue;" text="Choose File" HBox.hgrow="ALWAYS">
+              <font>
+                <Font name="SansSerif Regular" size="13.0" />
+              </font>
+            </Button>
+          </children>
+        </HBox>
+        <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+          <children>
+            <Label prefWidth="412.0" text="Please select a textfile with a DNA sequence." textFill="WHITE">
+              <font>
+                <Font name="SansSerif Regular" size="18.0" />
+              </font>
+            </Label>
+            <Button fx:id="analyze" contentDisplay="LEFT" mnemonicParsing="false" prefWidth="127.99990000000253" style="-fx-text-fill:white;&#10;-fx-background-color:royalblue;" text="Analyze" textOverrun="ELLIPSIS" />
+          </children>
+        </HBox>
+      </children>
+      <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+      </padding>
+    </VBox>
+  </children>
+  <padding>
+    <Insets />
+  </padding>
+</AnchorPane>

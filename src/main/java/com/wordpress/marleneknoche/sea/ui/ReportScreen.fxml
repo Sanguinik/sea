@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" snapToPixel="true" style="-fx-background-color:midnightblue;" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <VBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <HBox alignment="CENTER" prefHeight="79.0" prefWidth="600.0">
+          <children>
+            <Label alignment="CENTER" prefHeight="66.0" prefWidth="420.0" text="Report" textFill="WHITE">
+              <font>
+                <Font name="SansSerif Regular" size="20.0" />
+              </font>
+            </Label>
+            <Button fx:id="newReport" alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="36.0" prefWidth="140.00009999999747" style="-fx-text-fill:white;&#10;-fx-background-color:royalblue;" text="New Report" />
+          </children>
+        </HBox>
+        <GridPane alignment="BOTTOM_LEFT" disable="false" focusTraversable="false" gridLinesVisible="false" prefHeight="307.0" prefWidth="600.0" style="-fx-background-color:royalblue;" visible="true" VBox.vgrow="NEVER">
+          <children>
+            <TextArea fx:id="task11" disable="false" editable="false" prefWidth="200.0" style="-fx-background-color:royalblue;&#10;-fx-border-color:midnightblue;&#10;-fx-text-fill:white;" text="Found &quot;GGG&quot;'s: 3&#10;&#10;The person is at risk to acquiring  &#10;Tyberius syndrome." wrapText="true" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextArea fx:id="task12" disable="false" editable="false" prefWidth="200.0" style="-fx-background-color:royalblue;&#10;-fx-border-color:midnightblue;&#10;-fx-text-fill: white;&#10;" text="This person has brown eyes." wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <TextArea fx:id="task21" disable="false" editable="false" prefWidth="200.0" style="-fx-background-color:royalblue;&#10;-fx-border-color:midnightblue;&#10;-fx-text-fill: white;" text="Purines: 23&#10;Pyrimidines: 21&#10;&#10;There are more Purines than Pyrimidines in the sequence." wrapText="true" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextArea fx:id="task22" disable="false" editable="false" prefWidth="200.0" style="-fx-background-color:royalblue;&#10;-fx-border-color:midnightblue;&#10;-fx-text-fill: white;" text="This DNA shows evidence for the early onset of Fromingen's dischrypsia." wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextArea fx:id="task13" disable="false" editable="false" prefWidth="200.0" style="-fx-background-color:royalblue;&#10;-fx-border-color:midnightblue;&#10;-fx-text-fill: white;" text="Number of each nucleobase:&#10;&#10;A: 5&#10;C: 6&#10;G: 12&#10;T: 13" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <TextArea fx:id="task14" disable="false" editable="false" prefWidth="200.0" style="-fx-background-color:royalblue;&#10;-fx-border-color:midnightblue;&#10;-fx-text-fill: white;" text="The location of the first occurence of &quot;CTAG&quot; is:&#10;&#10;145" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+            <Group id="Group" autoSizeChildren="true" scaleX="1.0" scaleY="1.0" style="-fx-border-color:midnightblue;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+              <children>
+                <TextArea fx:id="task23" disable="false" editable="false" focusTraversable="true" layoutX="7.0" layoutY="-74.0" prefHeight="147.0" prefWidth="279.5" style="-fx-background-color:royalblue;&#10;-fx-border-color:midnightblue;&#10;-fx-text-fill: white;" text="The complementary sequence of the given DNA:&#10;&#10;AGTGCTGACGTCGATCGTAGCTAGCTAGCTACTAGCTAGCTACGTACGTACGTCAGTACGTACGTAGCTACGTACGTACGTACGTGACTGACTGTACGTAGCTGACTGACTGACTGTACGCTAGTACGTACGTAGCTAGCTAGCTACGTACGTAGCTAGCTAGCTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTAGC" wrapText="true" />
+              </children>
+            </Group>
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+      </children>
+      <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+      </padding>
+    </VBox>
+  </children>
+</AnchorPane>
