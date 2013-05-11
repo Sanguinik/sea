@@ -10,7 +10,7 @@ public class PatternMatcherTest {
 
 	private PatternMatcher patternMatcher;
 	private static final String SEQUENCE = "AGGCTAGACGAGGGCTAGTCGGGGCAGTAGGATCTT";
-	private static final String SEQUENCE_WITH_NO_SIGN = "AGTGACTACGCTAGCTAGGTCATC";
+	private static final String SEQUENCE_WITH_NO_SIGN = "AGTGACTACGCTAGCTAGGTCATCTTCAAGGA";
 	
 	private static final String BROWN_EYES = "CAGCAA";
 	

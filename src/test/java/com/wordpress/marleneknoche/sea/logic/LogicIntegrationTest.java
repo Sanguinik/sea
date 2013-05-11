@@ -64,6 +64,7 @@ public class LogicIntegrationTest {
 		assertTrue(nucleobaseCounter.hasMorePurinesThanPyrimidines(nucleobaseMap));
 				
 		//Task 2.2
+		assertFalse(patternMatcher.hasSignsForFromingensDischrypsia(loadedSequence));
 		
 		//Task 2.3
 		

@@ -17,7 +17,7 @@ public class ReportController {
 	private PatternMatcher patternMatcher = new PatternMatcher();
 	private NucleobaseCounter nucleobaseCounter = new NucleobaseCounter();
 	private ComplementarySequenceBuilder complementarySequenceBuilder = new ComplementarySequenceBuilder();
-	
+
 	@FXML
 	private TextArea task11;
 
@@ -102,27 +102,46 @@ public class ReportController {
 
 	private void loadTask21(String loadedSequence) {
 		int numberOfPurines = nucleobaseCounter.countPurines(nucleobaseMap);
-		int numberOfPyrimidines = nucleobaseCounter.countPyrimidines(nucleobaseMap);
-		boolean hasMorePurines = nucleobaseCounter.hasMorePurinesThanPyrimidines(nucleobaseMap);
-	
-		if(hasMorePurines){
-			task21.setText("Purines: " + numberOfPurines + "\n" + "Pyrimidines: " + numberOfPyrimidines + "\n \n" + "The sequence has more purines than pyrimidines.");
-		}else{
-			task21.setText("Purines: " + numberOfPurines + "\n" + "Pyrimidines: " + numberOfPyrimidines + "\n \n" + "The sequence has less purines than pyrimidines.");
+		int numberOfPyrimidines = nucleobaseCounter
+				.countPyrimidines(nucleobaseMap);
+		boolean hasMorePurines = nucleobaseCounter
+				.hasMorePurinesThanPyrimidines(nucleobaseMap);
+
+		if (hasMorePurines) {
+			task21.setText("Purines: " + numberOfPurines + "\n"
+					+ "Pyrimidines: " + numberOfPyrimidines + "\n \n"
+					+ "The sequence has more purines than pyrimidines.");
+		} else {
+			task21.setText("Purines: "
+					+ numberOfPurines
+					+ "\n"
+					+ "Pyrimidines: "
+					+ numberOfPyrimidines
+					+ "\n \n"
+					+ "The sequence has less or equal purines than/and pyrimidines.");
 		}
-		
+
 	}
 
-	private void loadTask22(String loadedSequence) {
-
-		// TODO Auto-generated method stub
+	private void loadTask22(String loadedSequence) {		
+		
+		String stringAnswer;
+		if(patternMatcher.hasSignsForFromingensDischrypsia(loadedSequence)){
+			stringAnswer = "";
+		}else{
+			stringAnswer = "no ";
+		}
+		
+		task22.setText("This DNA shows " + stringAnswer + "evidence for the early onset of Frømingen's dischrypsia.");
 
 	}
 
 	private void loadTask23(String loadedSequence) {
-		String complementarySequence = complementarySequenceBuilder.invertNucleobases(loadedSequence);
-		
-		task23.setText("The complementary sequence of the given DNA: \n \n" + complementarySequence);
+		String complementarySequence = complementarySequenceBuilder
+				.invertNucleobases(loadedSequence);
+
+		task23.setText("The complementary sequence of the given DNA: \n \n"
+				+ complementarySequence);
 	}
 
 }
