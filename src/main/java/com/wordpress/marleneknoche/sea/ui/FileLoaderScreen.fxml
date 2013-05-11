@@ -9,7 +9,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color:midnightblue;" xmlns:fx="http://javafx.com/fxml">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color:midnightblue;" xmlns:fx="http://javafx.com/fxml" fx:controller="com.wordpress.marleneknoche.sea.ui.FileChooserController">
   <children>
     <VBox alignment="CENTER_LEFT" prefHeight="400.0" prefWidth="600.0" spacing="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <children>
@@ -17,7 +17,7 @@
           <children>
             <ImageView fitHeight="107.61798095703125" fitWidth="251.39107405730823" pickOnBounds="true" preserveRatio="true">
               <image>
-                <Image url="file:/home/marlene/git/sea/src/main/resources/logo.png" />
+                <Image url="@logo.png" />
               </image>
               <HBox.margin>
                 <Insets />
@@ -53,7 +53,7 @@
                 <Font name="SansSerif Regular" size="18.0" />
               </font>
             </Label>
-            <Button fx:id="analyze" contentDisplay="LEFT" mnemonicParsing="false" prefWidth="127.99990000000253" style="-fx-text-fill:white;&#10;-fx-background-color:royalblue;" text="Analyze" textOverrun="ELLIPSIS" />
+            <Button fx:id="analyze" contentDisplay="LEFT" mnemonicParsing="false" onAction="#analyze" prefWidth="127.99990000000253" style="-fx-text-fill:white;&#10;-fx-background-color:royalblue;" text="Analyze" textOverrun="ELLIPSIS" />
           </children>
         </HBox>
       </children>

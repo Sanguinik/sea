@@ -9,7 +9,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" snapToPixel="true" style="-fx-background-color:midnightblue;" xmlns:fx="http://javafx.com/fxml">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" snapToPixel="true" style="-fx-background-color:midnightblue;" xmlns:fx="http://javafx.com/fxml" fx:controller="com.wordpress.marleneknoche.sea.ui.ReportController">
   <children>
     <VBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <children>
@@ -20,7 +20,7 @@
                 <Font name="SansSerif Regular" size="20.0" />
               </font>
             </Label>
-            <Button fx:id="newReport" alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="36.0" prefWidth="140.00009999999747" style="-fx-text-fill:white;&#10;-fx-background-color:royalblue;" text="New Report" />
+            <Button fx:id="newReport" alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#newReport" prefHeight="36.0" prefWidth="140.00009999999747" style="-fx-text-fill:white;&#10;-fx-background-color:royalblue;" text="New Report" />
           </children>
         </HBox>
         <GridPane alignment="BOTTOM_LEFT" disable="false" focusTraversable="false" gridLinesVisible="false" prefHeight="307.0" prefWidth="600.0" style="-fx-background-color:royalblue;" visible="true" VBox.vgrow="NEVER">
