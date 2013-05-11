@@ -1,12 +1,13 @@
 package com.wordpress.marleneknoche.sea.logic;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.junit.Before;
 import org.junit.Test;
 
 public class LogicIntegrationTest {
@@ -31,6 +32,7 @@ public class LogicIntegrationTest {
 		PatternMatcher patternMatcher = new PatternMatcher();
 		
 		//Task 1.1
+		assertEquals(10, patternMatcher.countGGG(loadedSequence));
 		
 		//Task 1.2
 		assertFalse(patternMatcher.hasBrownEyes(loadedSequence));

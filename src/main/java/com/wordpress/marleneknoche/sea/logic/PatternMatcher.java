@@ -8,11 +8,19 @@ package com.wordpress.marleneknoche.sea.logic;
 
 public class PatternMatcher {
 
-	;
+	public int countGGG(String sequence) {
 
-	public boolean findGGG(String sequence) {
-		// TODO Auto-generated method stub
-		return sequence.contains("GGG");
+		int numberOfGGG = 0;
+
+		String replacedPattern = sequence.replaceAll("(?<!G)[G]{3}(?!G)", "V");
+
+		for (int i = 0; i < replacedPattern.length(); i++) {
+			if (replacedPattern.charAt(i) == 'V') {
+				numberOfGGG += 1;
+			}
+		}
+
+		return numberOfGGG;
 	}
 
 	public int checkFirstOccurenceOfCTAG(String sequence) {
@@ -48,22 +56,20 @@ public class PatternMatcher {
 
 		String patternToCheck = "RRRRYYYY";
 		if (allBasesReplaced.contains(patternToCheck)) {
-			
+
 			char beforeFirstR = 'Y';
 			char afterLastY = 'R';
-			
-			if(allBasesReplaced.indexOf(patternToCheck) != 0){
-				beforeFirstR = allBasesReplaced.charAt(allBasesReplaced
-						.indexOf(patternToCheck) - 1);			
 
-				if((allBasesReplaced.indexOf(patternToCheck) + 8) != allBasesReplaced.length() ){
+			if (allBasesReplaced.indexOf(patternToCheck) != 0) {
+				beforeFirstR = allBasesReplaced.charAt(allBasesReplaced
+						.indexOf(patternToCheck) - 1);
+
+				if ((allBasesReplaced.indexOf(patternToCheck) + 8) != allBasesReplaced
+						.length()) {
 					afterLastY = allBasesReplaced.charAt(allBasesReplaced
-							.indexOf(patternToCheck) + 8);					
+							.indexOf(patternToCheck) + 8);
 				}
 			}
-			
-			
-			
 
 			if (beforeFirstR == 'Y' && afterLastY == 'R') {
 				return true;

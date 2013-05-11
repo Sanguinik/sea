@@ -1,6 +1,7 @@
 package com.wordpress.marleneknoche.sea.logic;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
@@ -9,7 +10,7 @@ import org.junit.Test;
 public class PatternMatcherTest {
 
 	private PatternMatcher patternMatcher;
-	private static final String SEQUENCE = "AGGCTAGACGAGGGCTAGTCGGGGCAGTAGGATCTT";
+	private static final String SEQUENCE = "GGGCTAGACGAGGGCTAGTCGGGGCAGTAGGATCTTGGG";
 	private static final String SEQUENCE_WITH_NO_SIGN = "AGTGACTACGCTAGCTAGGTCATCTTCAAGGA";
 	
 	private static final String BROWN_EYES = "CAGCAA";
@@ -21,13 +22,18 @@ public class PatternMatcherTest {
 	}
 
 	@Test
-	public void findGGGtest() {
+	public void countGGGtest() {
 		
-		boolean hasGGG = patternMatcher.findGGG(SEQUENCE);
+		int numberOfGGG = patternMatcher.countGGG(SEQUENCE);
 		
-		assertTrue(hasGGG);
-		//nach 'ggg' suchen und checken, ob davor oder danach auch ein g ist
-				
+		assertEquals(3, numberOfGGG);
+		
+	}
+	
+	@Test
+	public void countNoGGGtest(){
+		int numberOfGGG = patternMatcher.countGGG(SEQUENCE_WITH_NO_SIGN);
+		assertEquals(0, numberOfGGG);
 	}
 	
 	@Test

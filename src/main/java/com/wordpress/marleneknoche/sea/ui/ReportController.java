@@ -62,17 +62,31 @@ public class ReportController {
 	}
 
 	private void loadTask11(String loadedSequence) {
-		// TODO Auto-generated method stub
+		
+		int numberOfGGG = patternMatcher.countGGG(loadedSequence);
 
+		String answer;
+		
+		if(numberOfGGG == 3){
+			answer = "";			
+		}else{
+			answer = "no ";
+		}
+		
+		task11.setText("Found 'GGG's': " + numberOfGGG + "\n \nThe person is at " + answer +"risk to acquiring Tyberius syndrome.");
 	}
 
 	private void loadTask12(String loadedSequence) {
 
+		String answer;
+		
 		if (patternMatcher.hasBrownEyes(loadedSequence)) {
-			task12.setText("This person has brown eyes.");
+			answer = "";
 		} else {
-			task12.setText("This person has no brown eyes.");
+			answer = "no ";
 		}
+		
+		task12.setText("This person has " + answer +"brown eyes.");
 
 	}
 
@@ -107,18 +121,12 @@ public class ReportController {
 		boolean hasMorePurines = nucleobaseCounter
 				.hasMorePurinesThanPyrimidines(nucleobaseMap);
 
+		String numberText = "Purines: " + numberOfPurines + "\n"
+							+ "Pyrimidines: " + numberOfPyrimidines + "\n \n";
 		if (hasMorePurines) {
-			task21.setText("Purines: " + numberOfPurines + "\n"
-					+ "Pyrimidines: " + numberOfPyrimidines + "\n \n"
-					+ "The sequence has more purines than pyrimidines.");
+			task21.setText(numberText + "The sequence has more purines than pyrimidines.");
 		} else {
-			task21.setText("Purines: "
-					+ numberOfPurines
-					+ "\n"
-					+ "Pyrimidines: "
-					+ numberOfPyrimidines
-					+ "\n \n"
-					+ "The sequence has less or equal purines than/and pyrimidines.");
+			task21.setText(numberText + "The sequence has less or equal purines than/and pyrimidines.");
 		}
 
 	}
