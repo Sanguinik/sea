@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
+<?import java.net.*?>
 <?import java.util.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.*?>
@@ -33,7 +34,11 @@
             <TextArea fx:id="task14" disable="false" editable="false" prefWidth="200.0" style="-fx-background-color:royalblue;&#10;-fx-border-color:midnightblue;&#10;-fx-text-fill: white;" text="The location of the first occurence of &quot;CTAG&quot; is:&#10;&#10;145" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="0" />
             <Group id="Group" autoSizeChildren="true" scaleX="1.0" scaleY="1.0" style="-fx-border-color:midnightblue;" GridPane.columnIndex="2" GridPane.rowIndex="1">
               <children>
-                <TextArea fx:id="task23" disable="false" editable="false" focusTraversable="true" layoutX="7.0" layoutY="-74.0" prefHeight="147.0" prefWidth="279.5" style="-fx-background-color:royalblue;&#10;-fx-border-color:midnightblue;&#10;-fx-text-fill: white;" text="The complementary sequence of the given DNA:&#10;&#10;AGTGCTGACGTCGATCGTAGCTAGCTAGCTACTAGCTAGCTACGTACGTACGTCAGTACGTACGTAGCTACGTACGTACGTACGTGACTGACTGTACGTAGCTGACTGACTGACTGTACGCTAGTACGTACGTAGCTAGCTAGCTACGTACGTAGCTAGCTAGCTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTAGC" wrapText="true" />
+                <TextArea fx:id="task23" disable="false" editable="false" focusTraversable="true" layoutX="7.0" layoutY="-74.0" prefHeight="147.0" prefWidth="279.5" style="-fx-background-color:royalblue;&#10;-fx-border-color:midnightblue;&#10;-fx-text-fill: white;" styleClass="myScrollBar" text="The complementary sequence of the given DNA:&#10;&#10;AGTGCTGACGTCGATCGTAGCTAGCTAGCTACTAGCTAGCTACGTACGTACGTCAGTACGTACGTAGCTACGTACGTACGTACGTGACTGACTGTACGTAGCTGACTGACTGACTGTACGCTAGTACGTACGTAGCTAGCTAGCTACGTACGTAGCTAGCTAGCTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTAGC" wrapText="true">
+                  <stylesheets>
+                    <URL value="@Scrollbar.css" />
+                  </stylesheets>
+                </TextArea>
               </children>
             </Group>
           </children>
