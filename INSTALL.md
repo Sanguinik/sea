@@ -7,7 +7,9 @@
 
 	(You will eventually need sudo permissions on a linux machine.)
 
-3. 
+3. Run `mvn clean jfx:build-jar` on the project.
+
+After a successful build the executable jar will be inside the target folder. The executable jar will have the ending '-jfx.jar'.
 
 
 
