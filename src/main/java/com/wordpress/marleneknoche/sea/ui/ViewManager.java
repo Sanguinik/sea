@@ -7,6 +7,15 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+/**
+ * 
+ * The ViewManager is responsible to load the different views of the application. 
+ * As a singleton the ViewManager could be used from both views.
+ * 
+ * @author marlene
+ *
+ */
+
 public final class ViewManager {
 
 	private static ViewManager singleton = new ViewManager();
@@ -20,10 +29,20 @@ public final class ViewManager {
 
 	}
 
+	/**
+	 * This method sets the actual stage in the ViewManager.
+	 * 
+	 * @param primaryStage The stage that should be set.
+	 */
 	public void setStage(Stage primaryStage) {
 		this.primaryStage = primaryStage;
 	}
 
+	/**
+	 * 
+	 * This method loads the FileLoaderScreen.
+	 * 
+	 */
 	public void loadFileLoaderScreen() {
 
 		primaryStage.hide();
@@ -42,6 +61,11 @@ public final class ViewManager {
 
 	}
 
+	/**
+	 * 
+	 * This method loads the ReportScreen.
+	 * 
+	 */
 	public void loadReportScreen() {
 		
 	primaryStage.hide();
