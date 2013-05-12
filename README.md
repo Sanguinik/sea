@@ -14,6 +14,15 @@ it to several questions given in the task of of the coding contest.
 ##Solution to the given Tasks
 To get the answers to the questions given in the task, please check out the LogicIntegrationTest, which can be found in `src/test/java/LogicIntegrationTest.java`
 
+##How to use the application
+
+1. Start the runnable .jar file.
+2. Click on 'Choose File' and select a text file (*.txt) which contains a DNA sequence you want to analyze.
+3. Click on 'Analyze'. Now a report will be created and showed to you.
+4. (optional)  Click on 'New Report' to get back to the first screen for loading a new file. 
+
+That's all you need to do!
+
 ##System requirements
 
 You need an actual Java 7 installation on your computer to run this application.
