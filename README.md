@@ -11,10 +11,14 @@ contest ("http://www.coding-contest.de").
 The main purpose of this tool is to recieve a text file with a 1000-nucleobase long segment of a DNA and analyze 
 it to several questions given in the task of of the coding contest.
 
+##Solution to the given Tasks
+To get the answers to the questions given in the task, please check out the LogicIntegrationTest, which can be found in `src/test/java/LogicIntegrationTest.java`
+
 ##System requirements
 
 You need an actual Java 7 installation on your computer to run this application.
 To build the application you need an installation of Maven 3. 
+For more information to build and run the application, please check out the INSTALL.md.
 
 ##Technologies
 
