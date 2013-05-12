@@ -81,8 +81,10 @@ public class PatternMatcher {
 	 * 
 	 * This method checks for sings for Frømingen's dischrypsia.
 	 * 
-	 * @param sequence The sequence which should be checked.
-	 * @return true if there is a pattern of exactly 4 purines followed by 4 pyrimidines. Else returns false.
+	 * @param sequence
+	 *            The sequence which should be checked.
+	 * @return true if there is a pattern of exactly 4 purines followed by 4
+	 *         pyrimidines. Else returns false.
 	 */
 	public boolean hasSignsForFromingensDischrypsia(String sequence) {
 
